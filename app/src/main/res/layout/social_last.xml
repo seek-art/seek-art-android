@@ -1,0 +1,328 @@
+<?xml version="1.0" encoding="utf-8"?>
+<ScrollView
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    android:id="@+id/homesrollview"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+
+    >
+    <LinearLayout
+        android:background="#000"
+        android:orientation="vertical" android:layout_width="match_parent"
+        android:layout_height="match_parent">
+
+        <!--居中区域开始-->
+        <LinearLayout
+            android:orientation="vertical"
+            android:background="#fff"
+            android:padding="10dp"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content">
+
+
+            <LinearLayout
+                android:orientation="vertical"
+                android:layout_width="match_parent"
+                android:layout_height="match_parent">
+                <!--头像用户名关注-开始-->
+                <RelativeLayout
+                    android:layout_marginTop="5dp"
+                    android:layout_width="match_parent"
+                    android:layout_height="60dp">
+                    <ImageView
+                        android:id="@+id/user_cicleimage"
+                        android:padding="2dp"
+                        android:src="@drawable/last_touxiang"
+                        android:layout_width="60dp"
+                        android:layout_height="wrap_content" />
+                    <TextView
+                        android:layout_marginLeft="10dp"
+                        android:layout_centerVertical="true"
+                        android:layout_toRightOf="@id/user_cicleimage"
+                        android:layout_gravity="center_vertical"
+                        android:text="小花"
+                        android:textSize="18sp"
+                        android:textColor="#000"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content" />
+                    <Button
+                        android:layout_marginRight="10dp"
+                        android:layout_centerVertical="true"
+                        android:text="取消关注"
+                        android:layout_alignParentEnd="true"
+                        android:layout_gravity="right"
+                        android:background="@drawable/carekuang"
+                        android:layout_width="80dp"
+                        android:layout_height="30dp" />
+                </RelativeLayout>
+                <!--头像用户名关注结束-->
+                <!--用户说说开始-->
+                <TextView
+                    android:textColor="#000"
+                    android:textSize="16sp"
+                    android:layout_marginTop="5dp"
+                    android:text="   剪切，拼接，镂空，浑然一体."
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content" />
+                <!--用户说说结束-->
+
+                <!--用户展示图片开始-->
+                <android.support.v7.widget.RecyclerView
+                    android:layout_marginTop="5dp"
+                    android:id="@+id/usershow_recyclerview"
+                    android:layout_width="match_parent"
+                    android:layout_height="200dp"/>
+                <!--用户展示图片结束-->
+
+                <!--点赞区域开始-->
+                <RelativeLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="30dp">
+                    <ImageView
+                        android:id="@+id/img_zan"
+                        android:layout_centerVertical="true"
+                        android:src="@drawable/zan"
+                        android:layout_width="20dp"
+                        android:layout_height="20dp" />
+                    <TextView
+                        android:id="@+id/tv_commit"
+                        android:layout_marginLeft="5dp"
+                        android:layout_toRightOf="@id/img_zan"
+                        android:layout_centerVertical="true"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:text="3"
+                        />
+                    <ImageView
+                        android:layout_marginLeft="25dp"
+                        android:layout_toRightOf="@+id/tv_commit"
+                        android:id="@+id/img_commit"
+                        android:layout_centerVertical="true"
+                        android:src="@drawable/commit"
+                        android:layout_width="20dp"
+                        android:layout_height="20dp" />
+                    <TextView
+                        android:layout_marginLeft="5dp"
+                        android:layout_toRightOf="@id/img_commit"
+                        android:layout_centerVertical="true"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:text="1"
+                        />
+
+                    <TextView
+                        android:layout_centerVertical="true"
+                        android:layout_marginRight="10dp"
+                        android:layout_alignParentEnd="true"
+                        android:text="2月28号"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content" />
+                </RelativeLayout>
+                <!--点赞区域结束-->
+
+                <!--评论2-startt-->
+                <LinearLayout
+                    android:layout_marginTop="5dp"
+                    android:orientation="horizontal"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content">
+                    <TextView
+                        android:textColor="#2FC95F"
+                        android:text="薄日：   "
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content" />
+                    <LinearLayout
+                        android:layout_width="0dp"
+                        android:layout_weight="1"
+                        android:layout_height="wrap_content">
+                        <TextView
+                            android:text="给人一种多层次感，立体感很强。请问有什么学习的地方，和学习途经吗？"
+                            android:layout_width="match_parent"
+                            android:layout_height="match_parent" />
+                    </LinearLayout>
+                </LinearLayout>
+
+                <LinearLayout
+                    android:layout_marginTop="5dp"
+                    android:orientation="horizontal"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content">
+                    <TextView
+                        android:textColor="#2FC95F"
+                        android:text="阿斯蒂芬：   "
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content" />
+                    <LinearLayout
+                        android:layout_width="0dp"
+                        android:layout_weight="1"
+                        android:layout_height="wrap_content">
+                        <TextView
+                            android:text="抽象感很强"
+                            android:layout_width="match_parent"
+                            android:layout_height="match_parent" />
+                    </LinearLayout>
+                </LinearLayout>
+                <!--评论2-over-->
+            </LinearLayout>
+            <!--居中区域结束-->
+
+            <View
+                android:layout_gravity="center"
+                android:layout_marginTop="5dp"
+                android:layout_width="350dp"
+                android:layout_height="0.1dp"
+                android:background="#3C3F41" />
+
+
+            <LinearLayout
+                android:layout_marginTop="4dp"
+                android:orientation="vertical"
+                android:layout_width="match_parent"
+                android:layout_height="match_parent">
+                <!--头像用户名关注-开始-->
+                <RelativeLayout
+                    android:layout_marginTop="5dp"
+                    android:layout_width="match_parent"
+                    android:layout_height="60dp">
+                    <ImageView
+                        android:id="@+id/user_cicleimage1"
+                        android:padding="2dp"
+                        android:src="@drawable/bottom_touxiang"
+                        android:layout_width="60dp"
+                        android:layout_height="wrap_content" />
+                    <TextView
+                        android:layout_marginLeft="10dp"
+                        android:layout_centerVertical="true"
+                        android:layout_toRightOf="@id/user_cicleimage1"
+                        android:layout_gravity="center_vertical"
+                        android:text="蓝天"
+                        android:textSize="18sp"
+                        android:textColor="#000"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content" />
+                    <Button
+                        android:layout_marginRight="10dp"
+                        android:layout_centerVertical="true"
+                        android:text="取消关注"
+                        android:layout_alignParentEnd="true"
+                        android:layout_gravity="right"
+                        android:background="@drawable/carekuang"
+                        android:layout_width="80dp"
+                        android:layout_height="30dp" />
+                </RelativeLayout>
+                <!--头像用户名关注结束-->
+                <!--用户说说开始-->
+                <TextView
+                    android:textColor="#000"
+                    android:textSize="16sp"
+                    android:layout_marginTop="5dp"
+                    android:text="   星空真的很美丽！."
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content" />
+                <!--用户说说结束-->
+
+                <!--用户展示图片开始-->
+                <android.support.v7.widget.RecyclerView
+                    android:layout_marginTop="5dp"
+                    android:id="@+id/usershow_recyclerview1"
+                    android:layout_width="match_parent"
+                    android:layout_height="200dp"/>
+                <!--用户展示图片结束-->
+
+                <!--点赞区域开始-->
+                <RelativeLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="30dp">
+                    <ImageView
+                        android:id="@+id/img_zan1"
+                        android:layout_centerVertical="true"
+                        android:src="@drawable/zan"
+                        android:layout_width="20dp"
+                        android:layout_height="20dp" />
+                    <TextView
+                        android:id="@+id/tv_commit1"
+                        android:layout_marginLeft="5dp"
+                        android:layout_toRightOf="@id/img_zan1"
+                        android:layout_centerVertical="true"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:text="3"
+                        />
+                    <ImageView
+                        android:layout_marginLeft="25dp"
+                        android:layout_toRightOf="@+id/tv_commit1"
+                        android:id="@+id/img_commit1"
+                        android:layout_centerVertical="true"
+                        android:src="@drawable/commit"
+                        android:layout_width="20dp"
+                        android:layout_height="20dp" />
+                    <TextView
+                        android:layout_marginLeft="5dp"
+                        android:layout_toRightOf="@id/img_commit1"
+                        android:layout_centerVertical="true"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:text="5"
+                        />
+
+                    <TextView
+                        android:layout_centerVertical="true"
+                        android:layout_marginRight="10dp"
+                        android:layout_alignParentEnd="true"
+                        android:text="2月28号"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content" />
+                </RelativeLayout>
+                <!--点赞区域结束-->
+
+                <!--评论2-startt-->
+                <LinearLayout
+                    android:layout_marginTop="5dp"
+                    android:orientation="horizontal"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content">
+                    <TextView
+                        android:textColor="#2FC95F"
+                        android:text="蛋渣：   "
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content" />
+                    <LinearLayout
+                        android:layout_width="0dp"
+                        android:layout_weight="1"
+                        android:layout_height="wrap_content">
+                        <TextView
+                            android:text="星空真的是太美丽了"
+                            android:layout_width="match_parent"
+                            android:layout_height="match_parent" />
+                    </LinearLayout>
+                </LinearLayout>
+
+                <LinearLayout
+                    android:layout_marginTop="5dp"
+                    android:orientation="horizontal"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content">
+                    <TextView
+                        android:textColor="#2FC95F"
+                        android:text="Marvin: "
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content" />
+                    <LinearLayout
+                        android:layout_width="0dp"
+                        android:layout_weight="1"
+                        android:layout_height="wrap_content">
+                        <TextView
+                            android:text="where can I get your photoes ?"
+                            android:layout_width="match_parent"
+                            android:layout_height="match_parent" />
+                    </LinearLayout>
+                </LinearLayout>
+                <!--评论2-over-->
+            </LinearLayout>
+
+
+        </LinearLayout>
+
+    </LinearLayout>
+
+</ScrollView>

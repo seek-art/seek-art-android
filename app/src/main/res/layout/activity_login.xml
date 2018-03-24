@@ -1,0 +1,78 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:id="@+id/activity_register"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:orientation="vertical"
+    android:fitsSystemWindows="true"
+    tools:context="com.android.xunyi.Activity.RegisterActivity">
+    <android.support.v7.widget.CardView
+        android:orientation="horizontal"
+        android:layout_width="match_parent"
+        android:layout_height="?attr/actionBarSize">
+        <LinearLayout
+            android:background="#35343A"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent">
+        <ImageView
+            android:layout_marginLeft="10dp"
+            android:id="@+id/login_back"
+            android:layout_gravity="center_vertical"
+            android:src="@drawable/register_back"
+            android:layout_width="20dp"
+            android:layout_height="20dp"/>
+        <TextView
+            android:textColor="#fff"
+            android:layout_gravity="center_vertical"
+            android:textSize="18sp"
+            android:layout_marginLeft="15dp"
+            android:text="手机登录"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content" />
+        </LinearLayout>
+    </android.support.v7.widget.CardView>
+
+
+    <EditText
+    android:id="@+id/sign_phone"
+        android:layout_marginBottom="2dp"
+        android:layout_marginTop="24dp"
+        android:hint="手机号"
+        android:layout_gravity="center_horizontal"
+        android:layout_width="320dp"
+        android:layout_height="45dp" />
+
+    <EditText
+        android:id="@+id/sign_password"
+        android:layout_marginBottom="2dp"
+        android:layout_marginTop="15dp"
+        android:hint="密码"
+        android:layout_gravity="center_horizontal"
+        android:layout_width="320dp"
+        android:layout_height="45dp" />
+
+
+
+    <Button
+        android:id="@+id/toSignup"
+        android:textSize="16sp"
+        android:text="登录"
+        android:textColor="#fff"
+        android:layout_marginTop="10dp"
+        android:background="#35343A"
+        android:layout_gravity="center_horizontal"
+        android:layout_width="320dp"
+        android:layout_height="36dp" />
+    <TextView
+        android:layout_marginLeft="22dp"
+        android:text="忘记密码？"
+        android:textSize="16sp"
+        android:textColor="#484848"
+        android:layout_marginTop="15dp"
+        android:layout_width="match_parent"
+        android:layout_height="25dp" />
+
+
+</LinearLayout>
+

@@ -1,0 +1,16 @@
+<?xml version="1.0" encoding="utf-8"?>
+<menu xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    >
+    <item
+        android:title="购物车"
+        android:id="@+id/shopping_car"
+        android:icon="@drawable/shopping_car_item"
+        app:showAsAction="always"/>
+    <item
+        android:title="分享"
+        android:id="@+id/shopping_share"
+        android:icon="@drawable/shopping_share_item"
+        app:showAsAction="always"/>
+
+</menu>

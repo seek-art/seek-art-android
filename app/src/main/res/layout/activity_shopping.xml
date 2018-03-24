@@ -1,0 +1,358 @@
+<?xml version="1.0" encoding="utf-8"?>
+<android.support.design.widget.CoordinatorLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:orientation="vertical" android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:paddingBottom="60dp"
+    >
+    <android.support.v7.widget.CardView
+        android:layout_gravity="top"
+        android:background="#FFFFFF"
+        android:orientation="horizontal"
+        android:layout_width="match_parent"
+        android:layout_height="?attr/actionBarSize">
+
+        <TextView
+            android:textColor="#000"
+            android:layout_gravity="center"
+            android:textSize="22sp"
+            android:text="商城"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content" />
+        <ImageView
+            android:src="@drawable/shoppingcar"
+            android:layout_marginRight="20dp"
+            android:layout_gravity="center_vertical|right"
+            android:layout_width="23dp"
+            android:layout_height="23dp" />
+    </android.support.v7.widget.CardView>
+
+    <ScrollView
+        android:layout_marginTop="?attr/actionBarSize"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent">
+        <LinearLayout
+            android:orientation="vertical"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content">
+
+            <com.youth.banner.Banner
+                xmlns:app="http://schemas.android.com/apk/res-auto"
+                android:id="@+id/shopping_banner"
+                android:layout_width="match_parent"
+                android:layout_height="160dp"
+                android:layout_marginBottom="10dp"/>
+
+            <LinearLayout
+                android:background="#DBDBDB"
+                android:orientation="horizontal"
+                android:layout_width="match_parent"
+                android:layout_height="90dp">
+                <LinearLayout
+                    android:orientation="horizontal"
+                    android:layout_width="0dp"
+                    android:layout_weight="1"
+                    android:layout_height="90dp">
+                    <LinearLayout
+                        android:gravity="center_vertical"
+                        android:orientation="vertical"
+                        android:layout_width="0dp"
+                        android:layout_weight="1"
+                        android:layout_height="90dp">
+                        <TextView
+                            android:textSize="12sp"
+                            android:layout_gravity="center_vertical|center_horizontal"
+                            android:text="Custom Made"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content" />
+
+                        <TextView
+                            android:layout_gravity="center_vertical|center_horizontal"
+                            android:textColor="#000"
+                            android:textSize="14sp"
+                            android:text="个性定制"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content" />
+                    </LinearLayout>
+                    <LinearLayout
+                        android:orientation="horizontal"
+                        android:layout_width="0dp"
+                        android:layout_weight="1"
+                        android:layout_height="90dp">
+                        <ImageView
+                            android:layout_gravity="center_vertical|center_horizontal"
+                            android:scaleType="fitCenter"
+                            android:src="@drawable/gxdz2"
+                            android:layout_width="match_parent"
+                            android:layout_height="match_parent" />
+                    </LinearLayout>
+                </LinearLayout>
+                <ImageView
+                    android:layout_width="1dp"
+                    android:layout_height="match_parent"
+                    android:background="#FFF"
+                    />
+
+                <LinearLayout
+                    android:orientation="horizontal"
+                    android:layout_width="0dp"
+                    android:layout_weight="1"
+                    android:layout_height="90dp">
+
+                    <LinearLayout
+                        android:gravity="center_vertical"
+                        android:orientation="vertical"
+                        android:layout_width="0dp"
+                        android:layout_weight="1"
+                        android:layout_height="90dp">
+                        <TextView
+                            android:textSize="12sp"
+                            android:layout_gravity="center_vertical|center_horizontal"
+                            android:text="Art derivatives"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content" />
+
+                        <TextView
+                            android:layout_gravity="center_vertical|center_horizontal"
+                            android:textColor="#000"
+                            android:textSize="14sp"
+                            android:text="艺术衍生"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content" />
+                    </LinearLayout>
+                    <LinearLayout
+                        android:orientation="horizontal"
+                        android:layout_width="0dp"
+                        android:layout_weight="1"
+                        android:layout_height="90dp">
+                        <ImageView
+                            android:layout_gravity="center_vertical"
+                            android:src="@drawable/shan"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content" />
+                    </LinearLayout>
+
+
+
+
+
+                </LinearLayout>
+            </LinearLayout>
+            <ImageView
+                android:layout_width="match_parent"
+                android:layout_height="1dp"
+                android:background="#FFF"
+                />
+
+            <LinearLayout
+                android:background="#DBDBDB"
+                android:orientation="horizontal"
+                android:layout_width="match_parent"
+                android:layout_height="90dp">
+                <LinearLayout
+                    android:orientation="horizontal"
+                    android:layout_width="0dp"
+                    android:layout_weight="1"
+                    android:layout_height="90dp">
+                    <LinearLayout
+                        android:gravity="center_vertical"
+                        android:orientation="vertical"
+                        android:layout_width="0dp"
+                        android:layout_weight="1"
+                        android:layout_height="90dp">
+                        <TextView
+                            android:textSize="12sp"
+                            android:layout_gravity="center_vertical|center_horizontal"
+                            android:text="Original Art"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content" />
+
+                        <TextView
+                            android:layout_gravity="center_vertical|center_horizontal"
+                            android:textColor="#000"
+                            android:textSize="14sp"
+                            android:text="原创艺术"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content" />
+                    </LinearLayout>
+                    <LinearLayout
+                        android:orientation="horizontal"
+                        android:layout_width="0dp"
+                        android:layout_weight="1"
+                        android:layout_height="90dp">
+                        <ImageView
+                            android:src="@drawable/chinese"
+                            android:layout_width="match_parent"
+                            android:layout_height="match_parent" />
+                    </LinearLayout>
+                </LinearLayout>
+                <ImageView
+                    android:layout_width="1dp"
+                    android:layout_height="match_parent"
+                    android:background="#FFF"
+                    />
+                <LinearLayout
+                    android:orientation="horizontal"
+                    android:layout_width="0dp"
+                    android:layout_weight="1"
+                    android:layout_height="90dp">
+
+                    <LinearLayout
+                        android:gravity="center_vertical"
+                        android:orientation="vertical"
+                        android:layout_width="0dp"
+                        android:layout_weight="1"
+                        android:layout_height="90dp">
+                        <TextView
+                            android:textSize="11sp"
+                            android:layout_gravity="center_vertical|center_horizontal"
+                            android:text="Credits exchange"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content" />
+
+                        <TextView
+                            android:layout_gravity="center_vertical|center_horizontal"
+                            android:textColor="#000"
+                            android:textSize="14sp"
+                            android:text="积分兑换"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content" />
+                    </LinearLayout>
+                    <LinearLayout
+                        android:orientation="horizontal"
+                        android:layout_width="0dp"
+                        android:layout_weight="1"
+                        android:layout_height="90dp">
+                        <ImageView
+                            android:layout_gravity="center_vertical"
+                            android:src="@drawable/jfdh"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content" />
+                    </LinearLayout>
+
+                </LinearLayout>
+
+            </LinearLayout>
+
+            <!--四个展示结束-->
+            <ViewFlipper
+                android:id="@+id/shopping_vf"
+                android:layout_width="match_parent"
+                android:layout_height="95dp"
+                android:autoStart="true"
+                android:flipInterval="3000"
+                android:background="#fff"
+                android:paddingLeft="10dp"
+                android:inAnimation="@anim/anim_marquee_in"
+                android:outAnimation="@anim/anim_marquee_out"/>
+
+
+            <android.support.v7.widget.CardView
+                android:layout_gravity="top"
+                android:layout_width="match_parent"
+                android:layout_height="match_parent">
+            <RelativeLayout
+                android:layout_width="match_parent"
+                android:layout_height="?attr/actionBarSize">
+                <ImageView
+                    android:id="@+id/img_triangel"
+                    android:layout_alignParentStart="true"
+                    android:layout_centerInParent="true"
+                    android:src="@drawable/triangle"
+                    android:layout_marginLeft="6dp"
+                    android:layout_width="10dp"
+                    android:layout_height="10dp" />
+                <TextView
+                    android:layout_marginLeft="6dp"
+                    android:layout_centerInParent="true"
+                    android:layout_toRightOf="@id/img_triangel"
+                    android:textSize="12sp"
+                    android:textColor="#000"
+                    android:text="艺术衍生"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content" />
+                <ImageView
+                    android:id="@+id/img_more"
+                    android:layout_marginRight="6dp"
+                    android:layout_centerInParent="true"
+                    android:layout_alignParentEnd="true"
+                    android:src="@drawable/more"
+                    android:layout_width="10dp"
+                    android:layout_height="10dp" />
+                <TextView
+                    android:layout_marginRight="6dp"
+                    android:layout_centerInParent="true"
+                    android:layout_toLeftOf="@id/img_more"
+                    android:textSize="12sp"
+                    android:text="MORE"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content" />
+
+            </RelativeLayout>
+            <android.support.v7.widget.RecyclerView
+                android:id="@+id/recyclerview_ysys"
+                android:layout_marginTop="?attr/actionBarSize"
+                android:layout_gravity="center_horizontal"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content">
+
+            </android.support.v7.widget.RecyclerView>
+            </android.support.v7.widget.CardView>
+            <android.support.v7.widget.CardView
+                android:layout_gravity="top"
+                android:layout_width="match_parent"
+                android:layout_height="match_parent">
+                <RelativeLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="?attr/actionBarSize">
+                    <ImageView
+                        android:id="@+id/img_triangel2"
+                        android:layout_alignParentStart="true"
+                        android:layout_centerInParent="true"
+                        android:src="@drawable/triangle"
+                        android:layout_marginLeft="6dp"
+                        android:layout_width="10dp"
+                        android:layout_height="10dp" />
+                    <TextView
+                        android:layout_marginLeft="6dp"
+                        android:layout_centerInParent="true"
+                        android:layout_toRightOf="@id/img_triangel2"
+                        android:textSize="12sp"
+                        android:textColor="#000"
+                        android:text="寻艺定制"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content" />
+                    <ImageView
+                        android:id="@+id/img_more2"
+                        android:layout_marginRight="6dp"
+                        android:layout_centerInParent="true"
+                        android:layout_alignParentEnd="true"
+                        android:src="@drawable/more"
+                        android:layout_width="10dp"
+                        android:layout_height="10dp" />
+                    <TextView
+                        android:layout_marginRight="6dp"
+                        android:layout_centerInParent="true"
+                        android:layout_toLeftOf="@id/img_more2"
+                        android:textSize="12sp"
+                        android:text="MORE"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content" />
+
+                </RelativeLayout>
+                <android.support.v7.widget.RecyclerView
+                    android:id="@+id/recyclerview_xydz"
+                    android:layout_marginTop="?attr/actionBarSize"
+                    android:layout_gravity="center_horizontal"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content">
+
+                </android.support.v7.widget.RecyclerView>
+            </android.support.v7.widget.CardView>
+
+
+
+        </LinearLayout>
+    </ScrollView>
+
+</android.support.design.widget.CoordinatorLayout>

@@ -1,0 +1,8 @@
+<resources>
+    <string name="app_name">immortal</string>
+    <array name="social_tab">
+        <item>推荐@social@0</item>
+        <item>最新@social@1</item>
+        <item>关注@social@2</item>
+    </array>
+</resources>
