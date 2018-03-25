@@ -28,23 +28,13 @@
                 android:layout_height="wrap_content">
 
                 <com.facebook.drawee.view.SimpleDraweeView
-                    android:id="@+id/collection_avatar"
+                    android:id="@+id/exhibition_avatar"
                     android:layout_width="match_parent"
                     android:layout_height="wrap_content"
                     fresco:actualImageScaleType="centerCrop" />
 
-                <ImageView
-                    android:contentDescription="favorite"
-                    android:layout_alignParentTop="true"
-                    android:layout_alignParentRight="true"
-                    android:src="@drawable/ic_favorite_black_24dp"
-                    android:layout_marginRight="8dp"
-                    android:layout_marginTop="8dp"
-                    android:layout_width="18dp"
-                    android:layout_height="18dp" />
-
                 <TextView
-                    android:id="@+id/collection_name"
+                    android:id="@+id/exhibition_name"
                     android:layout_width="wrap_content"
                     android:layout_height="wrap_content"
                     android:layout_alignParentBottom="true"
@@ -60,7 +50,7 @@
                 android:layout_height="wrap_content">
                 <TextView
                     android:padding="8dp"
-                    android:id="@+id/collection_intro"
+                    android:id="@+id/exhibition_intro"
                     android:layout_width="match_parent"
                     android:layout_height="wrap_content" />
                 <View

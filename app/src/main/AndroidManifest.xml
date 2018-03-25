@@ -85,6 +85,8 @@
             android:theme="@style/Shopping_item_theme">
 
         </activity>
+        <activity android:name=".Activity.ExhibitionListActivity" />
+        <activity android:name=".Activity.OrderActivity" />
 
     </application>
 

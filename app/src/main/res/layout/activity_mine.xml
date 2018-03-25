@@ -153,27 +153,26 @@
                 android:layout_height="12dp" />
         </RelativeLayout>
     </LinearLayout>
-
     <LinearLayout
         android:orientation="horizontal"
         android:layout_width="match_parent"
         android:layout_height="40dp">
         <RelativeLayout
-            android:id="@+id/img_updateArt"
+            android:id="@+id/my_collection"
             android:layout_width="match_parent"
             android:layout_height="match_parent">
             <ImageView
-                android:id="@+id/img_control"
+                android:id="@+id/img_shoucang"
                 android:layout_alignParentStart="true"
                 android:layout_centerInParent="true"
-                android:src="@drawable/control"
+                android:src="@drawable/shoucang"
                 android:layout_marginLeft="15dp"
-                android:layout_width="20dp"
-                android:layout_height="20dp" />
+                android:layout_width="18dp"
+                android:layout_height="18dp" />
             <TextView
                 android:layout_marginLeft="6dp"
                 android:layout_centerInParent="true"
-                android:layout_toRightOf="@id/img_control"
+                android:layout_toRightOf="@id/img_shoucang"
                 android:textSize="15sp"
                 android:textColor="#7C7C7C"
                 android:text="收藏"
@@ -189,11 +188,13 @@
                 android:layout_height="12dp" />
         </RelativeLayout>
     </LinearLayout>
+
     <LinearLayout
         android:orientation="horizontal"
         android:layout_width="match_parent"
         android:layout_height="40dp">
         <RelativeLayout
+            android:id="@+id/my_order"
             android:layout_width="match_parent"
             android:layout_height="match_parent">
             <ImageView
@@ -246,41 +247,6 @@
                 android:textSize="15sp"
                 android:textColor="#7C7C7C"
                 android:text="收货地址"
-                android:layout_width="wrap_content"
-                android:layout_height="wrap_content" />
-            <ImageView
-                android:textColor="#7C7C7C"
-                android:layout_marginRight="12dp"
-                android:layout_centerInParent="true"
-                android:layout_alignParentEnd="true"
-                android:src="@drawable/dt1"
-                android:layout_width="12dp"
-                android:layout_height="12dp" />
-        </RelativeLayout>
-    </LinearLayout>
-    <LinearLayout
-        android:orientation="horizontal"
-        android:layout_width="match_parent"
-        android:layout_height="40dp">
-        <RelativeLayout
-            android:id="@+id/my_collection"
-            android:layout_width="match_parent"
-            android:layout_height="match_parent">
-            <ImageView
-                android:id="@+id/img_shoucang"
-                android:layout_alignParentStart="true"
-                android:layout_centerInParent="true"
-                android:src="@drawable/shoucang"
-                android:layout_marginLeft="15dp"
-                android:layout_width="18dp"
-                android:layout_height="18dp" />
-            <TextView
-                android:layout_marginLeft="6dp"
-                android:layout_centerInParent="true"
-                android:layout_toRightOf="@id/img_shoucang"
-                android:textSize="15sp"
-                android:textColor="#7C7C7C"
-                android:text="我的收藏"
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content" />
             <ImageView
