@@ -1,9 +1,10 @@
 <?xml version="1.0" encoding="utf-8"?>
 <LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:background="#E0E0E0"
     android:layout_width="match_parent"
     android:layout_height="match_parent">
-    <TextView
+    <android.support.v7.widget.RecyclerView
+        android:id="@+id/all_orders_recycler_view"
         android:layout_width="match_parent"
-        android:layout_height="match_parent"
-        android:text="fuck"/>
+        android:layout_height="match_parent" />
 </LinearLayout>
