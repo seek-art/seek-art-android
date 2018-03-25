@@ -8,20 +8,13 @@ import android.support.v4.app.Fragment;
 import android.view.LayoutInflater;
 import android.view.View;
 import android.view.ViewGroup;
-import android.widget.ImageView;
 import android.widget.RelativeLayout;
-import android.widget.Toast;
-
-import com.android.xunyi.Activity.Home_Activity;
-import com.android.xunyi.Activity.LoginActivity;
-import com.android.xunyi.Activity.UploadImage;
-import com.android.xunyi.Activity.WelcomeActivity;
-import com.android.xunyi.R;
-import com.android.xunyi.Utils.MyApplication;
-
-import butterknife.BindView;
 import butterknife.ButterKnife;
 import butterknife.OnClick;
+import com.android.xunyi.Activity.MyCollectionActivity;
+import com.android.xunyi.Activity.UploadImage;
+import com.android.xunyi.R;
+import com.android.xunyi.Utils.MyApplication;
 import me.drakeet.materialdialog.MaterialDialog;
 
 /**
@@ -37,6 +30,7 @@ public class Mine_Fragment extends Fragment {
         View view = inflater.inflate(R.layout.activity_mine, container, false);
         RelativeLayout rl= (RelativeLayout) view.findViewById(R.id.AR_draw);
         RelativeLayout r2=(RelativeLayout) view.findViewById(R.id.img_updateArt);
+        RelativeLayout myCollection= (RelativeLayout) view.findViewById(R.id.my_collection);
         rl.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
@@ -113,6 +107,14 @@ public class Mine_Fragment extends Fragment {
             public void onClick(View v) {
                 Intent intent2=new Intent(MyApplication.getContext(), UploadImage.class);
                 startActivity(intent2);
+            }
+        });
+
+        myCollection.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View view) {
+                Intent collectionIntent = new Intent(MyApplication.getContext(), MyCollectionActivity.class);
+                startActivity(collectionIntent);
             }
         });
 

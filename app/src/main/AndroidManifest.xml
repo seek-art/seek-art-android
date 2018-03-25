@@ -66,6 +66,7 @@
 
         <activity android:name=".Activity.CompanyListActivity" />
         <activity android:name=".Activity.CompanyDetailActivity" />
+        <activity android:name=".Activity.MyCollectionActivity" />
 
         <activity
             android:name=".Activity.H5_VR_Activity"
