@@ -139,7 +139,7 @@
                 android:layout_toRightOf="@id/img_draw"
                 android:textSize="15sp"
                 android:textColor="#7C7C7C"
-                android:text="我的全息画展"
+                android:text="展览"
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content" />
 
@@ -176,7 +176,7 @@
                 android:layout_toRightOf="@id/img_control"
                 android:textSize="15sp"
                 android:textColor="#7C7C7C"
-                android:text="更新全息画展作品"
+                android:text="收藏"
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content" />
             <ImageView

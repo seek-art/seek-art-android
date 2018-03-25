@@ -30,13 +30,11 @@
         android:label="@string/app_name"
         android:supportsRtl="true"
         android:theme="@style/AppTheme">
-        <activity android:name=".Activity.AppLoading_Activity" >
-
-
+        <activity android:name=".Activity.AppLoading_Activity">
 
 
         </activity>
-        <activity  android:name=".Activity.WaitActivity">
+        <activity android:name=".Activity.WaitActivity">
 
             <intent-filter>
                 <action android:name="android.intent.action.MAIN" />
@@ -65,6 +63,10 @@
 
         <activity android:name=".Activity.SearchActivity" />
 
+
+        <activity android:name=".Activity.CompanyListActivity" />
+        <activity android:name=".Activity.CompanyDetailActivity" />
+
         <activity
             android:name=".Activity.H5_VR_Activity"
             android:configChanges="orientation|keyboardHidden|screenLayout|screenSize" />
@@ -77,7 +79,9 @@
 
         <activity android:name=".Activity.BaseActivity" />
 
-        <activity android:name=".Activity.Shopping_item_details_Activity" android:theme="@style/Shopping_item_theme">
+        <activity
+            android:name=".Activity.Shopping_item_details_Activity"
+            android:theme="@style/Shopping_item_theme">
 
         </activity>
 

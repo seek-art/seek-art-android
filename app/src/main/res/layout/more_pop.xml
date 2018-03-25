@@ -108,7 +108,7 @@
                 android:layout_weight="1"
                 android:orientation="vertical">
             <Button
-                android:id="@+id/more_pop_art"
+                android:id="@+id/more_company"
                 android:layout_width="300px"
                 android:layout_height="300px"
                 android:background="@drawable/more_show4"

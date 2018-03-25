@@ -1,7 +1,6 @@
 package com.android.xunyi.Activity;
 
 import android.Manifest;
-import android.content.ComponentName;
 import android.content.Intent;
 import android.content.pm.PackageManager;
 import android.os.Bundle;
@@ -16,7 +15,7 @@ import android.widget.*;
 import com.android.xunyi.Fragment.*;
 import com.android.xunyi.R;
 
-public class Home_Activity extends BaseActivity implements View.OnClickListener{
+public class Home_Activity extends BaseActivity implements View.OnClickListener {
 
     private MorePopWin takePhotoPopWin;
 
@@ -31,7 +30,7 @@ public class Home_Activity extends BaseActivity implements View.OnClickListener{
     private FrameLayout flayout;
 
     private RelativeLayout homepage_layout;
-    private RelativeLayout  social_layout;
+    private RelativeLayout social_layout;
     private RelativeLayout shopping_layout;
     private RelativeLayout mine_layout;
     private RelativeLayout more_layout;
@@ -67,11 +66,11 @@ public class Home_Activity extends BaseActivity implements View.OnClickListener{
         fManager = getSupportFragmentManager();
         setChioceItem(0);
 
-        sv= (ScrollView) findViewById(R.id.homesrollview);
-        sv.smoothScrollTo(0,20);
+        sv = (ScrollView) findViewById(R.id.homesrollview);
+        sv.smoothScrollTo(0, 20);
 
         if (ContextCompat.checkSelfPermission(Home_Activity.this, Manifest.permission.WRITE_EXTERNAL_STORAGE) != PackageManager.PERMISSION_GRANTED) {
-            ActivityCompat.requestPermissions(Home_Activity.this, new String[]{ Manifest.permission. WRITE_EXTERNAL_STORAGE }, 1);
+            ActivityCompat.requestPermissions(Home_Activity.this, new String[]{Manifest.permission.WRITE_EXTERNAL_STORAGE}, 1);
         }
 
 
@@ -110,10 +109,10 @@ public class Home_Activity extends BaseActivity implements View.OnClickListener{
         more_layout = (RelativeLayout) findViewById(R.id.more_layout);
         mine_layout = (RelativeLayout) findViewById(R.id.mine_layout);
 
-        sv= (ScrollView) findViewById(R.id.homesrollview);
-       // fab= (FloatingActionButton) findViewById(R.id.plus);
-        fab2= (FloatingActionButton) findViewById(R.id.fangda);
-        fab3= (FloatingActionButton) findViewById(R.id.write);
+        sv = (ScrollView) findViewById(R.id.homesrollview);
+        // fab= (FloatingActionButton) findViewById(R.id.plus);
+        fab2 = (FloatingActionButton) findViewById(R.id.fangda);
+        fab3 = (FloatingActionButton) findViewById(R.id.write);
 
         homepage_layout.setOnClickListener(this);
         social_layout.setOnClickListener(this);
@@ -121,7 +120,7 @@ public class Home_Activity extends BaseActivity implements View.OnClickListener{
         mine_layout.setOnClickListener(this);
         more_layout.setOnClickListener(this);
 
-      //  fab.setOnClickListener(this);
+        //  fab.setOnClickListener(this);
         fab2.setOnClickListener(this);
         fab3.setOnClickListener(this);
 
@@ -143,15 +142,15 @@ public class Home_Activity extends BaseActivity implements View.OnClickListener{
                 setChioceItem(3);
                 break;
             case R.id.plus:
-                Intent intent2=new Intent(Home_Activity.this,H5_VR_Activity.class);
+                Intent intent2 = new Intent(Home_Activity.this, H5_VR_Activity.class);
                 startActivity(intent2);
                 break;
             case R.id.fangda:
-                Intent intent=new Intent(Home_Activity.this,SearchActivity.class);
+                Intent intent = new Intent(Home_Activity.this, SearchActivity.class);
                 startActivity(intent);
                 break;
             case R.id.write:
-                Toast.makeText(this,"正在火速开发中....",Toast.LENGTH_SHORT).show();
+                Toast.makeText(this, "正在火速开发中....", Toast.LENGTH_SHORT).show();
                 break;
             case R.id.more_layout:
                 //Toast.makeText(this,"更多",Toast.LENGTH_SHORT).show();
@@ -164,8 +163,7 @@ public class Home_Activity extends BaseActivity implements View.OnClickListener{
     }
 
     //定义一个选中一个item后的处理
-    public void setChioceItem(int index)
-    {
+    public void setChioceItem(int index) {
         //重置选项+隐藏所有Fragment
         FragmentTransaction transaction = fManager.beginTransaction();
         clearChioce();
@@ -186,7 +184,7 @@ public class Home_Activity extends BaseActivity implements View.OnClickListener{
                 } else {
                     // 如果MessageFragment不为空，则直接将它显示出来
                     transaction.show(fg1);
-                    sv.smoothScrollTo(0,20);
+                    sv.smoothScrollTo(0, 20);
                 }
                 break;
 
@@ -196,7 +194,7 @@ public class Home_Activity extends BaseActivity implements View.OnClickListener{
                 fab3.setVisibility(View.VISIBLE);
                 social_image.setImageResource(R.drawable.social2);
                 social_text.setTextColor(black);
-                sv.smoothScrollTo(0,20);
+                sv.smoothScrollTo(0, 20);
                 if (fg2 == null) {
                     // 如果fg1为空，则创建一个并添加到界面上
                     fg2 = new Social_Fragment();
@@ -213,7 +211,7 @@ public class Home_Activity extends BaseActivity implements View.OnClickListener{
                 fab3.setVisibility(View.GONE);
                 shopping_image.setImageResource(R.drawable.shopping2);
                 shopping_text.setTextColor(black);
-                sv.smoothScrollTo(0,20);
+                sv.smoothScrollTo(0, 20);
                 if (fg3 == null) {
                     // 如果fg1为空，则创建一个并添加到界面上
                     fg3 = new Shopping_Fragment();
@@ -230,7 +228,7 @@ public class Home_Activity extends BaseActivity implements View.OnClickListener{
                 fab3.setVisibility(View.GONE);
                 mine_image.setImageResource(R.drawable.mine2);
                 mine_text.setTextColor(black);
-                sv.smoothScrollTo(0,20);
+                sv.smoothScrollTo(0, 20);
                 if (fg4 == null) {
                     // 如果fg1为空，则创建一个并添加到界面上
                     fg4 = new Mine_Fragment();
@@ -241,7 +239,7 @@ public class Home_Activity extends BaseActivity implements View.OnClickListener{
                 }
                 break;
             case 4:
-                Intent intent2=new Intent(Home_Activity.this,H5_VR_Activity.class);
+                Intent intent2 = new Intent(Home_Activity.this, H5_VR_Activity.class);
                 startActivity(intent2);
                 if (fg1 == null) {
                     // 如果fg1为空，则创建一个并添加到界面上
@@ -251,14 +249,14 @@ public class Home_Activity extends BaseActivity implements View.OnClickListener{
                 } else {
                     // 如果MessageFragment不为空，则直接将它显示出来
                     transaction.show(fg1);
-                    sv.smoothScrollTo(0,20);
+                    sv.smoothScrollTo(0, 20);
                 }
                 break;
             case 5:
                 //fab.setVisibility(View.GONE);
                 fab2.setVisibility(View.GONE);
                 fab3.setVisibility(View.GONE);
-                sv.smoothScrollTo(0,20);
+                sv.smoothScrollTo(0, 20);
                 if (fg6 == null) {
                     // 如果fg1为空，则创建一个并添加到界面上
                     fg6 = new VideoFragment();
@@ -272,7 +270,7 @@ public class Home_Activity extends BaseActivity implements View.OnClickListener{
                 //fab.setVisibility(View.GONE);
                 fab2.setVisibility(View.GONE);
                 fab3.setVisibility(View.GONE);
-                sv.smoothScrollTo(0,20);
+                sv.smoothScrollTo(0, 20);
                 if (fg7 == null) {
                     // 如果fg1为空，则创建一个并添加到界面上
                     fg7 = new VRFragment();
@@ -312,8 +310,7 @@ public class Home_Activity extends BaseActivity implements View.OnClickListener{
     }
 
     //定义一个重置所有选项的方法
-    public void clearChioce()
-    {
+    public void clearChioce() {
         homepage_image.setImageResource(R.drawable.home1);
         homepage_text.setTextColor(mblack);
         social_image.setImageResource(R.drawable.social1);
@@ -342,11 +339,8 @@ public class Home_Activity extends BaseActivity implements View.OnClickListener{
                     setChioceItem(6);
                     takePhotoPopWin.dismiss();
                     break;
-                case R.id.more_pop_art:
-                    Intent intent=new Intent(Intent.ACTION_MAIN);
-                    intent.addCategory(Intent.CATEGORY_LAUNCHER);
-                    ComponentName cn=new ComponentName("com.YourCompany.test","com.epicgames.ue4.SplashActivity");
-                    intent.setComponent(cn);
+                case R.id.more_company:
+                    Intent intent = new Intent(Home_Activity.this, CompanyListActivity.class);
                     startActivity(intent);
                     break;
             }

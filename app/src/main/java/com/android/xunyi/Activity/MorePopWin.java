@@ -26,7 +26,7 @@ public class MorePopWin extends PopupWindow {
         btn_show1 = (Button) view.findViewById(R.id.more_pop_show);
         btn_show2 = (Button) view.findViewById(R.id.more_pop_cate);
         btn_show3 = (Button) view.findViewById(R.id.more_pop_vr);
-        btn_show4 = (Button) view.findViewById(R.id.more_pop_art);
+        btn_show4 = (Button) view.findViewById(R.id.more_company);
         btn_cancel = (Button) view.findViewById(R.id.more_pop_return);
         // 取消按钮
         btn_cancel.setOnClickListener(new View.OnClickListener() {

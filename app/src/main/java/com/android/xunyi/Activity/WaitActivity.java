@@ -7,10 +7,8 @@ import android.support.v7.app.ActionBar;
 import android.support.v7.app.AppCompatActivity;
 import android.view.Window;
 import android.view.WindowManager;
-import android.view.animation.AlphaAnimation;
 import android.widget.RelativeLayout;
 import android.widget.TextView;
-
 import com.android.xunyi.R;
 
 import java.util.Timer;
@@ -33,9 +31,6 @@ public class WaitActivity extends AppCompatActivity {
 
         //获取组件
         RelativeLayout r1_splash = (RelativeLayout)findViewById(R.id.r1_splash);
-        tv_splash_version = (TextView)findViewById(R.id.tv_splash_version);
-
-        tv_splash_version.setText("版本号：" + getVersion());
 
         //背景透明度变化3秒内从0.3变到1.0
         /*AlphaAnimation aa = new AlphaAnimation(0.3f, 1.0f);
