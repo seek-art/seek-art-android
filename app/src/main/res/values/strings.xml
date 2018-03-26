@@ -5,4 +5,9 @@
         <item>最新@social@1</item>
         <item>关注@social@2</item>
     </array>
+    <string-array name="theme_options">
+        <item>阳光海滩</item>
+        <item>森林幽径</item>
+        <item>古堡宫殿</item>
+    </string-array>
 </resources>

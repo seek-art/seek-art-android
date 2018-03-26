@@ -328,8 +328,10 @@ public class Home_Activity extends BaseActivity implements View.OnClickListener 
 
             switch (v.getId()) {
                 case R.id.more_pop_show:
-                    setChioceItem(4);
-                    takePhotoPopWin.dismiss();
+//                    setChioceItem(4);
+//                    takePhotoPopWin.dismiss();
+                    Intent createShowIntent = new Intent(Home_Activity.this, CreateExhibitionActivity.class);
+                    startActivity(createShowIntent);
                     break;
                 case R.id.more_pop_cate:
                     setChioceItem(5);
