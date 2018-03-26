@@ -4,6 +4,8 @@ import android.os.Bundle;
 import android.support.v7.app.AppCompatActivity;
 import android.support.v7.widget.RecyclerView;
 import android.support.v7.widget.StaggeredGridLayoutManager;
+import android.support.v7.widget.Toolbar;
+import android.view.View;
 import com.android.xunyi.Adapter.ExhibitionListAdapter;
 import com.android.xunyi.Entity.Exhibition;
 import com.android.xunyi.R;
@@ -24,6 +26,20 @@ public class ExhibitionListActivity extends AppCompatActivity {
     public void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_exhibition_list);
+
+        Toolbar mToolbar = (Toolbar) findViewById(R.id.exhibition_list_toolbar);
+        mToolbar.setTitle("展览");
+        setSupportActionBar(mToolbar);
+
+        getSupportActionBar().setDisplayHomeAsUpEnabled(true);
+        getSupportActionBar().setDisplayShowHomeEnabled(true);
+
+        mToolbar.setNavigationOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View view) {
+                finish();
+            }
+        });
         init();
     }
 

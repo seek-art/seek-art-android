@@ -5,6 +5,8 @@ import android.support.annotation.Nullable;
 import android.support.v7.app.AppCompatActivity;
 import android.support.v7.widget.LinearLayoutManager;
 import android.support.v7.widget.RecyclerView;
+import android.support.v7.widget.Toolbar;
+import android.view.View;
 import com.android.xunyi.Adapter.CompanyListAdapter;
 import com.android.xunyi.Entity.Company;
 import com.android.xunyi.R;
@@ -23,6 +25,20 @@ public class CompanyListActivity extends AppCompatActivity {
     public void onCreate(@Nullable Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_company_list);
+        Toolbar mToolbar = (Toolbar) findViewById(R.id.company_list_toolbar);
+        mToolbar.setTitle("企业文化");
+        setSupportActionBar(mToolbar);
+
+        getSupportActionBar().setDisplayHomeAsUpEnabled(true);
+        getSupportActionBar().setDisplayShowHomeEnabled(true);
+
+        mToolbar.setNavigationOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View view) {
+                finish();
+            }
+        });
+
         initFruits();
         RecyclerView recyclerView = (RecyclerView) findViewById(R.id.company_recycler_view);
         LinearLayoutManager layoutManager = new LinearLayoutManager(this);

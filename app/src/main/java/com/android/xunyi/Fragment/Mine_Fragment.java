@@ -7,10 +7,12 @@ import android.support.v4.app.Fragment;
 import android.view.LayoutInflater;
 import android.view.View;
 import android.view.ViewGroup;
+import android.widget.LinearLayout;
 import android.widget.RelativeLayout;
 import butterknife.ButterKnife;
 import butterknife.OnClick;
 import com.android.xunyi.Activity.ExhibitionListActivity;
+import com.android.xunyi.Activity.MessageActivity;
 import com.android.xunyi.Activity.MyCollectionActivity;
 import com.android.xunyi.Activity.OrderActivity;
 import com.android.xunyi.R;
@@ -32,6 +34,22 @@ public class Mine_Fragment extends Fragment {
 //        RelativeLayout r2=(RelativeLayout) view.findViewById(R.id.img_updateArt);
         RelativeLayout myCollection = (RelativeLayout) view.findViewById(R.id.my_collection);
         RelativeLayout myOrder = (RelativeLayout) view.findViewById(R.id.my_order);
+        LinearLayout myMessage = (LinearLayout) view.findViewById(R.id.my_message);
+        RelativeLayout myMessageItem = (RelativeLayout) view.findViewById(R.id.my_message_item);
+
+        final Intent messageIntent = new Intent(MyApplication.getContext(), MessageActivity.class);
+        myMessageItem.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View view) {
+                startActivity(messageIntent);
+            }
+        });
+        myMessage.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View view) {
+                startActivity(messageIntent);
+            }
+        });
         rl.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {

@@ -4,6 +4,8 @@ import android.os.Bundle;
 import android.support.v7.app.AppCompatActivity;
 import android.support.v7.widget.RecyclerView;
 import android.support.v7.widget.StaggeredGridLayoutManager;
+import android.support.v7.widget.Toolbar;
+import android.view.View;
 import com.android.xunyi.Adapter.CollectionAdapter;
 import com.android.xunyi.Entity.MyCollection;
 import com.android.xunyi.R;
@@ -23,6 +25,21 @@ public class MyCollectionActivity extends AppCompatActivity {
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_colllection);
+
+        Toolbar mToolbar = (Toolbar) findViewById(R.id.collection_list_toolbar);
+        mToolbar.setTitle("收藏");
+        setSupportActionBar(mToolbar);
+
+        getSupportActionBar().setDisplayHomeAsUpEnabled(true);
+        getSupportActionBar().setDisplayShowHomeEnabled(true);
+
+        mToolbar.setNavigationOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View view) {
+                finish();
+            }
+        });
+
         init();
     }
 
