@@ -56,6 +56,9 @@
             android:theme="@style/ColorTranslucentTheme">
 
         </activity>
+        <activity android:name=".Activity.CustomizeActivity">
+
+        </activity>
 
         <activity android:name=".Activity.Home_Activity">
 

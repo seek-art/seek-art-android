@@ -146,13 +146,12 @@
     </RelativeLayout>
 
    <TextView
-     android:layout_marginTop="60dp"
+     android:layout_marginTop="20dp"
      android:background="#EDEFF3"
      android:layout_width="match_parent"
      android:layout_height="1dp" />
 
     <LinearLayout
-        android:layout_marginTop="20dp"
         android:layout_gravity="bottom"
         android:id="@+id/next_sigup"
         android:orientation="horizontal"

@@ -3,42 +3,28 @@ package com.android.xunyi.Activity;
 import android.app.ProgressDialog;
 import android.content.ComponentName;
 import android.content.Intent;
-import android.support.v4.util.TimeUtils;
-import android.support.v7.app.AppCompatActivity;
 import android.os.Bundle;
+import android.support.v7.app.AppCompatActivity;
 import android.support.v7.widget.GridLayoutManager;
 import android.support.v7.widget.RecyclerView;
 import android.util.Log;
 import android.view.View;
 import android.widget.AdapterView;
 import android.widget.TextView;
-import android.widget.Toast;
-
 import com.android.xunyi.Adapter.ImagePickerAdapter;
-import com.android.xunyi.CustomView.GlideImageLoader;
 import com.android.xunyi.R;
-import com.android.xunyi.Utils.MyApplication;
 import com.lzy.imagepicker.ImagePicker;
 import com.lzy.imagepicker.bean.ImageItem;
 import com.lzy.imagepicker.ui.ImageGridActivity;
 import com.lzy.imagepicker.ui.ImagePreviewDelActivity;
 import com.lzy.imagepicker.view.CropImageView;
+import okhttp3.*;
 
 import java.io.File;
 import java.io.IOException;
 import java.util.ArrayList;
 import java.util.List;
 import java.util.concurrent.TimeUnit;
-
-import okhttp3.Cache;
-import okhttp3.Call;
-import okhttp3.Callback;
-import okhttp3.MediaType;
-import okhttp3.MultipartBody;
-import okhttp3.OkHttpClient;
-import okhttp3.Request;
-import okhttp3.RequestBody;
-import okhttp3.Response;
 
 public class UploadImage extends AppCompatActivity implements ImagePickerAdapter.OnRecyclerViewItemClickListener {
 
@@ -65,7 +51,7 @@ public class UploadImage extends AppCompatActivity implements ImagePickerAdapter
         cancel.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
-                Intent backToMine=new Intent(UploadImage.this,Home_Activity.class);
+                Intent backToMine = new Intent(UploadImage.this, Home_Activity.class);
                 startActivity(backToMine);
                 finish();
                 //Toast.makeText(UploadImage.this,"cancle",Toast.LENGTH_SHORT).show();
@@ -81,7 +67,7 @@ public class UploadImage extends AppCompatActivity implements ImagePickerAdapter
                 }*/
                 uploadMultipartFile();
 
-                final ProgressDialog progressDialog=new ProgressDialog(UploadImage.this,R.style.AppTheme_Dark_Dialog);
+                final ProgressDialog progressDialog = new ProgressDialog(UploadImage.this, R.style.AppTheme_Dark_Dialog);
                 progressDialog.setIndeterminate(true);
                 progressDialog.setMessage("上传中....");
                 progressDialog.show();
@@ -90,19 +76,17 @@ public class UploadImage extends AppCompatActivity implements ImagePickerAdapter
                     @Override
                     public void run() {
 
-                        Intent intent=new Intent(Intent.ACTION_MAIN);
+                        Intent intent = new Intent(Intent.ACTION_MAIN);
                         intent.addCategory(Intent.CATEGORY_LAUNCHER);
-                        ComponentName cn=new ComponentName("com.YourCompany.test","com.epicgames.ue4.SplashActivity");
+                        ComponentName cn = new ComponentName("com.YourCompany.test", "com.epicgames.ue4.SplashActivity");
                         intent.setComponent(cn);
                         startActivity(intent);
                         progressDialog.dismiss();
                     }
-                },3000);
+                }, 3000);
 
             }
         });
-
-
 
 
     }
@@ -111,33 +95,33 @@ public class UploadImage extends AppCompatActivity implements ImagePickerAdapter
         new Thread(new Runnable() {
             @Override
             public void run() {
-                File sdcache=getCacheDir();
-                int cacheSize=10*1024*1024;
+                File sdcache = getCacheDir();
+                int cacheSize = 10 * 1024 * 1024;
 
-                OkHttpClient.Builder builder=new OkHttpClient.Builder()
+                OkHttpClient.Builder builder = new OkHttpClient.Builder()
                         .connectTimeout(15, TimeUnit.SECONDS)
                         .writeTimeout(20, TimeUnit.SECONDS)
-                        .readTimeout(20,TimeUnit.SECONDS)
-                        .cache(new Cache(sdcache.getAbsoluteFile(),cacheSize));
+                        .readTimeout(20, TimeUnit.SECONDS)
+                        .cache(new Cache(sdcache.getAbsoluteFile(), cacheSize));
 
-                OkHttpClient mOkHttpClient=builder.build();
+                OkHttpClient mOkHttpClient = builder.build();
 
-                MultipartBody.Builder mbody=new MultipartBody.Builder().setType(MultipartBody.FORM);
-                List<File>fileList=new ArrayList<File>();
-                for (ImageItem img: selImageList){
-                    File image=new File(img.path);
+                MultipartBody.Builder mbody = new MultipartBody.Builder().setType(MultipartBody.FORM);
+                List<File> fileList = new ArrayList<File>();
+                for (ImageItem img : selImageList) {
+                    File image = new File(img.path);
                     fileList.add(image);
                 }
 
-                for (File file:fileList){
-                    if (file.exists()){
-                        Log.i("imageName:",file.getName());
-                        mbody.addFormDataPart("file",file.getName(),RequestBody.create(MediaType.parse("image/*"),file));
+                for (File file : fileList) {
+                    if (file.exists()) {
+                        Log.i("imageName:", file.getName());
+                        mbody.addFormDataPart("file", file.getName(), RequestBody.create(MediaType.parse("image/*"), file));
 
                     }
                 }
 
-                RequestBody requestBody =mbody.build();
+                RequestBody requestBody = mbody.build();
                 Request request = new Request.Builder()
                         .header("Authorization", "Client-ID " + "...")
                         .url("http://123.206.191.30:8080/didilashi/multipart/upload")
@@ -157,7 +141,7 @@ public class UploadImage extends AppCompatActivity implements ImagePickerAdapter
                 });
 
 
-        }
+            }
         }).start();
 
 
@@ -187,8 +171,8 @@ public class UploadImage extends AppCompatActivity implements ImagePickerAdapter
         recyclerView.setHasFixedSize(true);
         recyclerView.setAdapter(adapter);
 
-        cancel=(TextView) findViewById(R.id.imgpicker_cancel);
-        send=(TextView)findViewById(R.id.imgpicker_send);
+        cancel = (TextView) findViewById(R.id.imgpicker_cancel);
+        send = (TextView) findViewById(R.id.imgpicker_send);
     }
 
     private SelectDialog showDialog(SelectDialog.SelectDialogListener listener, List<String> names) {

@@ -1,0 +1,38 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:orientation="vertical">
+
+    <TextView
+        android:layout_marginTop="20dp"
+        android:paddingLeft="25dp"
+        android:id="@android:id/empty"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="我的素材库"
+        android:textAppearance="?android:attr/textAppearanceMedium" />
+
+    <Button
+        android:layout_marginTop="30dp"
+        android:layout_gravity="center"
+        android:text="我要上传"
+        android:textSize="16sp"
+        android:textColor="#fff"
+        android:background="@drawable/loginbg"
+        android:layout_width="100dp"
+        android:layout_height="35dp"
+        android:typeface="sans" />
+
+    <Button
+        android:layout_marginTop="30dp"
+        android:layout_gravity="center"
+        android:text="下一步"
+        android:textSize="16sp"
+        android:textColor="#fff"
+        android:background="@drawable/loginbg"
+        android:layout_width="300dp"
+        android:layout_height="35dp"
+        android:typeface="sans" />
+
+</LinearLayout>

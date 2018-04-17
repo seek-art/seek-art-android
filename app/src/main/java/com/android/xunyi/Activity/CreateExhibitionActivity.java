@@ -1,11 +1,13 @@
 package com.android.xunyi.Activity;
 
+import android.content.Intent;
 import android.os.Bundle;
 import android.support.annotation.Nullable;
 import android.support.v7.app.AppCompatActivity;
 import android.support.v7.widget.Toolbar;
 import android.view.View;
 import android.widget.ArrayAdapter;
+import android.widget.Button;
 import android.widget.Spinner;
 import com.android.xunyi.R;
 
@@ -27,6 +29,7 @@ public class CreateExhibitionActivity extends AppCompatActivity {
         spinner.setAdapter(adapter);
 
         Toolbar mToolbar = (Toolbar) findViewById(R.id.my_toolbar);
+        Button nextStep = (Button) findViewById(R.id.create_next);
         mToolbar.setTitle("申请");
         setSupportActionBar(mToolbar);
 
@@ -37,6 +40,13 @@ public class CreateExhibitionActivity extends AppCompatActivity {
             @Override
             public void onClick(View view) {
                 finish();
+            }
+        });
+        nextStep.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View view) {
+                Intent startIntent = new Intent(CreateExhibitionActivity.this, UploadImage.class);
+                startActivity(startIntent);
             }
         });
     }

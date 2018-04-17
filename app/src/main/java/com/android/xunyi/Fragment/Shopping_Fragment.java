@@ -10,9 +10,11 @@ import android.support.v7.widget.RecyclerView;
 import android.view.LayoutInflater;
 import android.view.View;
 import android.view.ViewGroup;
+import android.widget.LinearLayout;
 import android.widget.Toast;
 import android.widget.ViewFlipper;
 
+import com.android.xunyi.Activity.CustomizeActivity;
 import com.android.xunyi.Activity.Shopping_item_details_Activity;
 import com.android.xunyi.Activity.ZoomImageView_Activity;
 import com.android.xunyi.CustomView.GlideImageLoader;
@@ -109,6 +111,16 @@ public class Shopping_Fragment extends Fragment{
             }
         });
 
+
+        // customizeBtn
+        LinearLayout customizeBtn = (LinearLayout)  view.findViewById(R.id.customize_button);
+        customizeBtn.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View view) {
+                Intent customizeIntent = new Intent(MyApplication.getContext(), CustomizeActivity.class);
+                startActivity(customizeIntent);
+            }
+        });
 
         ViewFlipper vp= (ViewFlipper) view.findViewById(R.id.shopping_vf);
         vp.addView(View.inflate(MyApplication.getContext(),R.layout.ad_one,null));
