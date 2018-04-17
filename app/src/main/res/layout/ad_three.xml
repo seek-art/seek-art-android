@@ -25,7 +25,7 @@
             android:layout_height="wrap_content"
             android:ellipsize="end"
             android:padding="3dp"
-            android:text="寻艺线下，寻找草根艺术家正在进行中，欢迎参加！"
+            android:text="IMMORTAL线下，寻找草根艺术家正在进行中，欢迎参加！"
             android:textColor="#333"
             android:textSize="14sp" />
     </LinearLayout>
@@ -50,7 +50,7 @@
             android:layout_height="wrap_content"
             android:ellipsize="end"
             android:padding="3dp"
-            android:text="不要再困恼没有平台，来寻艺吧！"
+            android:text="不要再困恼没有平台，来IMMORTAL吧！"
             android:textColor="#333"
             android:textSize="14sp" />
     </LinearLayout>

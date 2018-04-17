@@ -54,11 +54,11 @@ public class LoginActivity extends BaseActivity {
     private void login() {
         String phone=signPhone.getText().toString().trim();
         String passworld=signPassword.getText().toString().trim();
-        if(phone.equals("18072997390")&&passworld.equals("123456"))
+        if(phone.equals("13888888888")&&passworld.equals("123456"))
         {
             final ProgressDialog progressDialog=new ProgressDialog(LoginActivity.this,R.style.AppTheme_Dark_Dialog);
             progressDialog.setIndeterminate(true);
-            progressDialog.setMessage("Authenticating....");
+            progressDialog.setMessage("登录中....");
             progressDialog.show();
 
             new android.os.Handler().postDelayed(new Runnable() {

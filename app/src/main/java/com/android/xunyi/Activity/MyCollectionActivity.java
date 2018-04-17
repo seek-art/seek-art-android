@@ -53,18 +53,18 @@ public class MyCollectionActivity extends AppCompatActivity {
     }
 
     private List<MyCollection> buildData() {
-        String[] names = {"神庙画展", "神庙画展", "神庙画展", "神庙画展"};
+        String[] names = {"神庙画展", "艺术收藏馆", "欧式简约风", "简洁素雅"};
         String[] intros = {
                 "投身于古典气息的神庙，充分领略现代画作带来的魅力吧",
-                "投身于古典气息的神庙，充分领略现代画作带来的魅力吧",
-                "投身于古典气息的神庙，充分领略现代画作带来的魅力吧",
+                "这个拥有三层空间的收藏馆囊括了蚀刻版画、釉瓷以及绿松石艺术品",
+                "仿照欧式风格的办公场所，简约的布置风格和宽敞的空间使人心情舒畅",
                 "投身于古典气息的神庙，充分领略现代画作带来的魅力吧",
         };
         String[] imgUrs = {
-                "http://o6ljw8wcq.bkt.clouddn.com/xunyi/temple.png",
-                "http://o6ljw8wcq.bkt.clouddn.com/xunyi/temple.png",
-                "http://o6ljw8wcq.bkt.clouddn.com/xunyi/temple.png",
-                "http://o6ljw8wcq.bkt.clouddn.com/xunyi/temple.png"
+                "http://103.80.27.100:8008/immortal/temple.png",
+                "http://103.80.27.100:8008/immortal/all8.png",
+                "http://103.80.27.100:8008/immortal/all12.png",
+                "http://103.80.27.100:8008/immortal/all5.png"
         };
         List<MyCollection> list = new ArrayList<>();
         for (int i = 0; i < 4; i++) {

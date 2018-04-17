@@ -34,7 +34,7 @@ public class Show_H5_Activity extends AppCompatActivity {
 
         mWebView.getSettings().setJavaScriptEnabled(true);
         mWebView.setWebViewClient(new WebViewClient());
-        mWebView.loadUrl("http://120.24.60.121/show/danmaku.html");
+        mWebView.loadUrl("http://103.80.27.100:8008/immortal/webpage/h5-show.html");
 
        /* webSettings.setJavaScriptEnabled(true);
         webSettings.setSupportZoom(false);
